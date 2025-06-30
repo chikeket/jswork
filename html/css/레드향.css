@@ -1,0 +1,62 @@
+#container{
+        width: 600px;
+        /* 바깥여백 : 0 auto:브라우저에게 맡김 */
+        margin: 0 auto;
+        /* border: 1px solid #ccc; */
+        padding: 20px;
+      }
+      #container div{
+  border: 1px solid #ccc;
+}
+      img{
+        width: 200px;
+        height: 200px;
+      }
+      th, td, table{
+        border: 1px solid black;
+      }
+      .fp{
+        padding: 30px 30px 10px 30px;
+        margin-bottom: 10px;
+      }
+      .fp h1{
+        margin: 0px;        
+      }
+      .fp img{
+        float: left;
+        width: 130px;
+        height: 210px;
+        margin: 0px 30px 0px 0px;        
+      }
+      .sp{
+        margin-bottom: 10px;
+        padding: 10px;
+      }
+      .sp img{
+        float: right;
+        width: 180px;
+        height: 150px;
+      }
+      
+      .fourthP{
+        padding: 10px;
+        margin-top: 5px;
+      }
+      .fourthP table  {
+        /* text-align: center; */
+        width: 80%;
+        border-collapse: collapse;
+        margin: 0 auto;
+      }
+      th{
+        background-color: bisque;
+      }
+#tablecolbg{
+  background-color: aquamarine;
+}
+
+
+
+
+
+

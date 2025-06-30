@@ -1,0 +1,56 @@
+#container {
+  width: 800px;
+  /* border: 1px solid black; */
+  margin: 0 auto;
+}
+.east-sea-dokdo-regular {
+  font-family: "East Sea Dokdo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  background-color: rgb(7, 121, 197);
+  color: white;
+  padding: 10px 50px 10px 10px;
+}
+
+header li {
+  float: right;
+  margin: 10px;
+  list-style: none;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  border: 5px solid rgb(116, 186, 233);
+  padding: 10px;
+}
+
+section img {
+  float: right;
+  width: 200px;
+  height: 500px;
+}
+
+section li,
+section h3 {
+  margin: 33px 0px;
+}
+#listEdit li {
+  list-style: upper-roman;
+}
+footer {
+  background-color: rgb(7, 121, 197);
+  color: white;
+  padding: 25px;
+}
+footer p {
+  text-align: center;
+  margin: 0px;
+  font-size: 30px;
+}

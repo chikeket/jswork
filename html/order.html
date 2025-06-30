@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상품 주문서</title>
+  <style>
+    #container{
+      width: 500px;
+      margin: 0 auto;
+      border: 1px solid #ccc;      
+    }
+    fieldset{
+      margin: 10px;
+    }
+    h1{
+      margin: 0px;
+    }
+    .bolld{
+      font-weight: bold;
+
+    }
+    legend{
+      color: purple;
+      font-weight: bold;
+    }
+    li{
+      list-style: none;
+      margin: 5px;
+    }
+    label{
+      float: left;
+      width: 70px;
+    }
+    .order label{
+      float: none;
+    }
+    .subsub{
+      border: none;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>상품 주문서</h1>
+    <fieldset>
+      <legend>개인 정보</legend>
+      <ul>
+        <li>
+          <label for="userName" class="bolld">이름</label>
+          <input type="text" id="userName" name="userName" placeholder="여백없이 입력">
+        </li>
+        <li>
+          <label for="userTel" class="bolld">연락처</label>
+          <input type="tel" id="userTel" name="userTel" placeholder="연락가능한 번호">
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>배송지 정보</legend>
+      <ul>
+        <li>
+          <label for="userAddress" class="bolld">주소</label>
+          <input type="text" id="userAddress" name="userAddress" size="37px">
+        </li>
+        <li>
+          <label for="toUserTel" class="bolld">전화번호</label>
+          <input type="tel" id="toUserTel" name="toUserTel">
+        </li>
+        <li>
+          <label for="toUserMemo" class="bolld">메모</label>
+          <textarea cols="40" rows="5" name="" id=""></textarea>          
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="order">
+      <legend>주문 정보</legend>
+      <ul>
+        <li>
+          <input type="checkbox" id="sungju" name="sungju">
+          <label for="sungju">경북성주 참외(5kg)
+          <input type="number" name="sungju" value="0" min="0" max="100">
+          Box
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="yungCheon" name="yungCheon">
+          <label for="yungCheon">경북영천 포도(5kg)
+          <input type="number" name="yungCheon" value="0" min="0" max="100">
+          Box
+          </label>
+        </li><li>
+          <input type="checkbox" id="bongHwa" name="bongHwa">
+          <label for="bongHwa">경북봉화 수박(5kg)
+          <input type="number" name="bongHwa" value="0" min="0" max="100">
+          Box
+          </label>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="subsub">
+      <button type="submit">주문하기</button>
+      <button type="reset">다시 작성</button>
+    </fieldset>
+  </div>
+</body>
+</html>

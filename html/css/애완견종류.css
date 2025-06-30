@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&family=Nanum+Brush+Script&family=Noto+Sans+KR:wght@100..900&display=swap');
+    #container{
+      width: 1000px;
+      margin: 0 auto;
+    }
+    .nanum-brush-script-regular {
+  font-family: "Nanum Brush Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+    }
+
+    header{
+      background-color: beige;
+    }
+    nav li{
+      display: inline-block;
+      padding: 5px 10px 5px 5px;
+      margin: 10px 0;
+      /* margin-right: 0px; */
+      border-bottom: 3px solid #ccc;
+      border-radius: 10px;
+    }
+    nav li:hover{
+      border-color: #f00;
+    }
+    a{
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:visited{
+      color: #000;
+    }
+    section ul{
+    text-align: center;
+    padding: 0px;
+    }
+    section li{
+      display: inline-block;
+      /* display: inline; */
+      padding: 10px;
+      margin: 10px;
+    }
+    section{
+      background-color: #ddd;
+      padding: 10px;
+
+    }
+    article{
+      border: 1px solid black;
+      padding: 16px;
+      /* background-color: rgba(255,255,255,0.5); */
+      background-color: rgba(0,0,0,0.1);
+      font-family: "Nanum Brush Script", cursive;
+      border-radius: 20px;
+      margin-top: 10px;
+    }
+    figure{
+      text-align: center;
+    }
+    .hid{
+      /* visibility: hidden; */
+      /* display: none; */
+      opacity: 0.5;
+    }
+    .hid:hover{
+      opacity: 1;
+    }
+    img{
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 1px 1px 10px 2px #000;
+      margin: 20px;
+      opacity: 0.5;
+
+    }
+    img:hover{
+      opacity: 1;
+    }
+    aside{
+      background-color: rgb(219, 148, 204);
+      padding: 10px;
+      
+    }
+    aside li{
+      line-height: 1.5;
+    }
+    footer{
+      background-color: black;
+      color: aliceblue;
+      padding: 10px;
+      text-align: center;
+    }
+    footer p{
+      margin: 10px;
+    }
+    .fixed{
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: rgb(33, 177, 177);
+      text-align: center;
+      line-height: 70px;
+      position: fixed;
+      bottom: 30px;
+      right: 50px;
+    }
+    .fixed p{
+      margin: 0;
+    }
+    .menu{
+      display: block;
+      text-align: right;
+      margin-right: 20px;
+    }
+    
