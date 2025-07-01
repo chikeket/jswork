@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pdf54페이지 문제7</title>
+    <style>
+      tr,
+      td {
+        border: 1px solid white;
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let totalView = parseInt(prompt("전체 관람객 총 명수"));
+      let oneView = parseInt(prompt("A열 관람객 총 명수(0~3)"));
+      let twoView = parseInt(prompt("B열 관람객 총 명수(0~3)"));
+      let threeView = parseInt(totalView - oneView - twoView);
+      let visitTable = "";
+
+      if (totalView != oneView + twoView + threeView) {
+        alert("관람객 수가 일치하지 않음");
+      } else {
+        console.log("관람객 수가 일치함");
+      }
+
+      visitTable += `<table><tbody>`;
+
+      visitTable += `<tr>`;
+      let i = 0;
+      let oneViewChk = oneView;
+      while (i <= 2) {
+        if (oneViewChk != 0) {
+          visitTable += `<td>좌석${i + 1}</td>`;
+          oneViewChk -= 1;
+          i++;
+        } else {
+          visitTable += `<td>공석</td>`;
+          i++;
+        }
+      }
+
+      visitTable += `</tr><tr>`;
+      let j = 0;
+      let twoViewChk = twoView;
+      while (j <= 2) {
+        if (twoViewChk != 0) {
+          visitTable += `<td>좌석${j + 4}</td>`;
+          twoViewChk -= 1;
+          j++;
+        } else {
+          visitTable += `<td>공석</td>`;
+          j++;
+        }
+      }
+
+      visitTable += `</tr><tr>`;
+      let k = 0;
+      let threeViewChk = threeView;
+      while (k <= 2) {
+        if (threeViewChk != 0) {
+          visitTable += `<td>좌석${k + 7}</td>`;
+          threeViewChk -= 1;
+          k++;
+        } else {
+          visitTable += `<td>공석</td>`;
+          k++;
+        }
+      }
+      visitTable += `</tr>`;
+      visitTable += `</tbody></table>`;
+      document.write(visitTable);
+    </script>
+  </body>
+</html>
