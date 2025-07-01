@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가위바위보</title>
+</head>
+<body>
+  <script>
+    let rsp = Math.floor(Math.random() * 3) + 1;
+    let challUser = prompt("가위:1, 바위:2, 보:3 중 하나를 입력하세요."+ rsp)
+    let sci = 1;
+    let rock = 2;
+    let paper = 3;
+if(challUser==sci && rsp==paper ||challUser==rock && rsp==sci ||challUser==paper && rsp==rock){
+  alert("승")
+}else if (challUser==sci && rsp==rock ||challUser==rock && rsp==paper ||challUser==paper && rsp==sci){
+  alert("패")
+}else{
+  alert("무승부")
+}
+    
+    
+  </script>
+</body>
+</html>
