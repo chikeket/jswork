@@ -20,10 +20,17 @@
       let threeView = parseInt(totalView - oneView - twoView);
       let visitTable = "";
 
+      while(true){
       if (totalView != oneView + twoView + threeView) {
         alert("관람객 수가 일치하지 않음");
+        totalView = parseInt(prompt("전체 관람객 총 명수"));
+        oneView = parseInt(prompt("A열 관람객 총 명수(0~3)"));
+        twoView = parseInt(prompt("B열 관람객 총 명수(0~3)"));
+        threeView = parseInt(totalView - oneView - twoView);        
       } else {
         console.log("관람객 수가 일치함");
+        break;
+      }
       }
 
       visitTable += `<table><tbody>`;

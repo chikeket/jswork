@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>도전문제</title>
+</head>
+
+<body>
+  <h1>도전문제</h1>
+  <script>
+    //수 입력
+    // let userNum = prompt("실수를 입력")
+    // //입력이 취소 되면 -> 입력 취소 출력
+    // // let userCancle = alert("입력 취소됨")
+    // //홀수면 홀수, 짝수면 짝수 출력
+    // if (userNum == null) {
+    //   alert("입력 취소됨")      
+    // } else if (userNum % 2 == 0) {
+    //   alert(userNum + "짝수")
+    // } else {
+    //   alert(`${userNum} 홀수`)
+    // }
+
+    //국어, 영어, 수학 점수 입력 받아서 평균, 평가 출력
+    // let kor = Number(prompt("국어점수 입력"));
+    // let eng = Number(prompt("영어점수 입력"));
+    // let math = Number(prompt("수학점수 입력"));
+    // //점수 입력 -> 3개 저장
+    // //평균 = (국어점수 + 영어 + 수학) / 과목수
+    // let scoreAvg = parseInt((kor + eng + math) / 3);
+    // //평가 => 평균에 따라 수90, 우80, 미70, 양60, 가59이하
+    // let grade;
+    // if (scoreAvg >= 90) {
+    //   grade = "수";
+    // } else if (scoreAvg >= 80) {
+    //   grade = "우";
+    // } else if (scoreAvg >= 70) {
+    //   grade = "미";
+    // } else if (scoreAvg >= 60) {
+    //   grade = "양";
+    // } else {
+    //   grade = "가";
+    // }
+    // console.log(scoreAvg + "점 ->" + grade)
+    // // switch문 : 조건이 여러개 일때 if문 대신 사용
+    // switch (parseInt(scoreAvg / 10)) {
+    //   case 10 : 
+    //   case 9 : grade = "수"; break;
+    //   case 8 : grade = "우"; break;
+    //   case 7 : grade = "미"; break;
+    //   case 6 : grade = "양"; break;
+    //   default : grade = "가";
+
+    // }
+    // //결과 => 콘솔창 출력 91점 ->수
+
+    // console.log(scoreAvg + "점 ->" + grade)
+
+    // //평균을 7로 나눈 나머지 =>요일
+    // //0 -> 일요일 ~ 6 -> 토요일
+    // let week;
+    // //switch 문 사용
+    // switch (parseInt(scoreAvg % 7)) {
+    //   case 6 : week = "토요일"; break;
+    //   case 5 : week = "금요일"; break;
+    //   case 4 : week = "목요일"; break;
+    //   case 3 : week = "수요일"; break;
+    //   case 2 : week = "화요일"; break;
+    //   case 1 : week = "월요일"; break;
+    //   default : week = "일요일"
+    // }
+    // console.log("나머지" + parseInt(scoreAvg % 7) + "점 ->" + week)
+
+    // let age = Number(prompt("나이 입력 : "));
+    // //(조건) ? 조건 만족 처리 : 만족x 처리 ;
+    // (age >= 18) ? alert(`${age} 판매가능`) : alert(`${age} 판매불가`);
+    let sum=0;
+    for(let i = 1; i<=9; i+=2){
+      sum += i;
+      console.log(sum);
+    }
+  </script>
+</body>
+
+</html>

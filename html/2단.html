@@ -7,11 +7,17 @@
   <style>
     #container{
       border: 1px solid #ccc;
-      width: 960px;
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      /* justify-content: space-between; */
+      /* justify-content: space-around; */
+      justify-content: space-evenly;
       padding: 20px;
       margin: 0 auto;
     }
     header{
+      width: 100%;
       border: 1px solid #ccc;
       padding: 10px;
       margin-bottom: 20px;
@@ -21,23 +27,35 @@
       color: green;      
     }
     section{
-      border: 1px solid #ccc;
+      width: 70%;
+      background-color: beige;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      /* border: 1px solid #ccc;
       width: 620px;
       padding: 20px;
       float: left;
-      margin-bottom: 20px;
+      margin-bottom: 20px; */
+    }
+    section h3{
+      width: 100%;
     }
     aside{
-      border: 1px solid #686565;
+      width: 20%;
+      background-color: #ccc;
+      /* border: 1px solid #686565;
       background-color: #d3d0d0;
       padding: 20px;
       width: 220px;
-      float: right;
+      float: right; */
     }
     footer{
-      border: 1px solid #ccc;
+      width: 100%;
+      /* border: 1px solid #ccc;
       clear: both;
-      padding: 10px;
+      padding: 10px; */
     }
   </style>
 </head>

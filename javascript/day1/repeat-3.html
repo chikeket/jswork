@@ -18,6 +18,15 @@
       
     }
     document.write("</table>");
+
+    //1에서 100까지 3의 배수의 갯수 구하기
+    let cnt = 0;
+    for (let i=1; i <=100; i++){
+      if(i%3 == 0 || i%5 == 0){
+        cnt++
+      }
+    }
+    console.log(`3의 배수와 5의 배수 둘을 만족 시키는 수의 갯수는 ${cnt}`)
   </script>
 
 </body>
