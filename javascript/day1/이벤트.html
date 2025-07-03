@@ -34,24 +34,25 @@
       Numquam consequatur assumenda voluptas illo quo harum
       soluta aspernatur officia. Temporibus!</p>
     <!-- <button type="button" id="close" onclick="closef()">상세설명 닫기</button> -->
-    <button type="button" id="close">상세설명 닫기</button>
+    <!-- <button type="button" id="close">상세설명 닫기</button> -->
 
   </div>
   <script>
     let showBtn = document.querySelector('#open')
-    let closeBtn = document.querySelector('#close')
+    // let closeBtn = document.querySelector('#close')
     let desc = document.querySelector('#desc')
 
     showBtn.onclick = show;
-    closeBtn.onclick = closef;
+    // closeBtn.onclick = closef;
 
     function show() {
       desc.style.display = 'block';
-      showBtn.style.display = 'none';
+      showBtn.innerText = '상세설명 닫기';
+      addEventListener
     }
     function closef() {
       desc.style.display = 'none';
-      showBtn.style.display = 'block';
+      showBtn.innerText = '상세설명 보기';
     }
   </script>
 </body>

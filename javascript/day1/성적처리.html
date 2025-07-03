@@ -25,6 +25,52 @@
 <body>
   <h3>성적처리</h3>
   <script>
+
+    function Student(name, kor, eng, math, art) {
+      //객체의 속성 : 속성값
+      this.name = name,
+      this.kor = kor,
+      this.eng = eng,
+      this.math = math,
+      this.art = art
+    }
+    //공통영역에 메소드
+    //총점
+    Student.prototype.getSum = function () {
+      return this.kor + this.eng + this.math + this.art
+    }
+    //평균
+    Student.prototype.getAvg = function () {
+      return parseInt((this.kor + this.eng + this.math + this.art)/4)
+    }
+
+    //배열에 학생객체 만들어서 저장
+    let stuArr = [
+      new Student('홍길동', 80, 90, 48, 64),
+      new Student('홍길동2', 75, 97, 87, 70),
+      new Student('홍길동3', 67, 64, 86, 94),
+      new Student('홍길동4', 53, 74, 55, 85),
+      new Student('홍길동5', 44, 78, 38, 79)
+    ];
+    let htTable = `<table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>총점</th>
+          <th>평균</th>
+        </tr>
+      </thead>
+      <tbody>
+        `
+          
+    //출력(콘솔창)
+    console.log(stuArr)
+    for (i=0; i<stuArr.length; i++){
+      htTable += (`<tr><td>${stuArr[i].name}</td><td>${stuArr[i].getSum()}</td><td>${stuArr[i].getAvg()}</td></tr>`)
+    }
+    htTable +=`</tbody></table>`
+    document.write(htTable);
+    //배열 순환 전체 학생 출력
     let layout = `<table>
       <thead>
         <tr>
