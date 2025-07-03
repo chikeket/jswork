@@ -85,11 +85,11 @@
       for (let j = 1; j <= i; j++) {
         stars += " ";
       }
-      for (let k = 1; k <= 2 * -i+9; k++) {
+      for (let k = 1; k <= 2 * -i + 9; k++) {
         stars += "*";
       }
       stars += "\n"
-    }    
+    }
     console.log(stars);
 
     //자리배치도
@@ -100,9 +100,9 @@
     // 배치도 : layout    
 
     // let personNum = prompt("관객수입력");
-    let personNum = 10;
+    let personNum = 22;
     // let colNum = prompt("줄수입력");
-    let colNum = 3;
+    let colNum = 4;
     let rowNum = parseInt(personNum / colNum);
     rowNum = personNum % colNum == 0 ? rowNum : ++rowNum;
     // if (personNum % colNum != 0) {
