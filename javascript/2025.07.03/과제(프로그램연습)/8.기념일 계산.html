@@ -76,12 +76,25 @@
   </div>
     <script>
      // 웹문서 위치 접근
+     let passDay = document.querySelector("#accent");
 
      // 날짜 계산
-    
+    let today = new Date();
+    let firstDay = new Date('2025-6-16');
+    let result = parseInt((today - firstDay) / (1000*60*60*24));
+    passDay.innerHTML = result + "일";
      // 기념일 날짜계산
      // 함수 선언
-
+      function d_day(day){
+        let anyday = new Date(2025,5,16 + day);
+        let year = anyday.getFullYear();
+        let month = anyday.getMonth()+1;
+        month = month < 10 ? `0${month}` : month
+        let date = anyday.getDate();
+        date = date < 10 ? `0${date}` : date
+        let str = `${year}년 ${month}월 ${date}일`
+        document.querySelector('#date'+day).innerHTML = str;
+      }
      // 함수 호출
      d_day(100);
      d_day(200);
