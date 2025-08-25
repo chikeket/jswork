@@ -1,19 +1,67 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>체크리스트</title>
-    <link href="css/도서목록.css" rel="stylesheet">
-  </head>
-  <body>
-    <div id="wrapper">
-      <h2> 권장 도서 목록</h2>
-      <form name="bookInfo">
-        <input type="text" id="book" name="book" autofocus>
-        <button type="button" id="add" name="add" class="addBtn" >추가</button>
-      </form>
-      <div id="bookList"></div>
-    </div>
-    <script src="js/도서목록.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>체크리스트</title>
+  <link href="css/도서목록.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="wrapper">
+    <h2> 권장 도서 목록</h2>
+    <form name="bookInfo">
+      <input type="text" id="book" name="book" autofocus>
+      <button type="button" id="add" name="add" class="addBtn">추가</button>
+    </form>
+    <div id="bookList"></div>
+    <div class="eeer"></div>
+  </div>
+  <!-- <script src="js/도서목록.js"></script> -->
+  <script>
+    let bookInputInfo = document.querySelector("#book");
+    let bookBtnInfo = document.querySelector("#add");
+    let bookRenderTag = document.querySelector("#bookList");
+
+
+    let bookStorage = [];
+
+
+    bookBtnInfo.addEventListener("click", bookInputSave);
+
+    function bookInputSave() {
+      if (bookStorage.indexOf(bookInputInfo.value) != -1) {
+        console.log("중복책")
+      } else if (bookInputInfo.value == "") {
+        console.log("빈칸")
+      } else {
+        bookStorage.push(bookInputInfo.value);
+      }
+      bookInputInfo.value = "";
+      bookInputInfo.focus();
+      console.log(bookStorage);
+      bookPageRender();
+    }
+
+    function bookPageRender() {
+      let layDummy = `<ul>`;
+      for (i = 0; i < bookStorage.length; i++) {
+        layDummy += `<li>${bookStorage[i]}<span class=del id=${i}>❌<span></li>`;
+      }
+      layDummy += `</ul>`;
+      bookRenderTag.innerHTML = layDummy;
+      let willRemove = document.querySelectorAll(".del");
+      for (let ele of willRemove) {
+        ele.addEventListener("click", bookListRemove);
+      }
+    }
+
+    function bookListRemove() {
+      let removeLink = this.getAttribute("id");
+      bookStorage.splice(removeLink, 1);
+      bookPageRender();
+    }
+  </script>
+</body>
+
 </html>

@@ -1,43 +1,49 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>폼</title>
   <style>
-    #container{
+    #container {
       width: 600px;
       margin: 0 auto;
       border: 1px solid #ccc;
       padding: 20px;
     }
-    .redacent{
+
+    .redacent {
       color: #f00;
       font-weight: bold;
     }
-    form li{
+
+    form li {
       list-style: none;
       margin: 5px;
       overflow: hidden;
     }
-    form label{
+
+    form label {
       width: 100px;
       /* display: inline-block; */
       float: left;
     }
+
     /* .label-w label{     
       float: none; 
       display: inline-block;
     } */
-     /* input:enabled{
+    /* input:enabled{
       background-color: yellow;
      } */
-      input:checked + span{
-        color: blue;
-        font-weight: bold;
-      }
+    input:checked+span {
+      color: blue;
+      font-weight: bold;
+    }
   </style>
 </head>
+
 <body>
   <div id="container">
     <h1>폼 만들기</h1>
@@ -46,9 +52,9 @@
         <legend>텍스트 입력</legend>
         <ul>
           <li>
-          <label for="user-id">아이디</label>
-          <input type="text" id="user-id" name="user-id" size="10" maxlength="10">
-          </li>        
+            <label for="user-id">아이디</label>
+            <input type="text" id="user-id" name="user-id" size="10" maxlength="10" autofocus>
+          </li>
           <li>
             <label for="pw">비밀번호</label>
             <input type="password" id="pw" name="pw">
@@ -79,11 +85,11 @@
             </li>
             <li>
               <label for="memo">메모</label>
-              <textarea cols="40" rows="5" placeholder="지원동기 간략히" name="" ></textarea>
+              <textarea cols="40" rows="5" placeholder="지원동기 간략히" name=""></textarea>
             </li>
             <li>
               <label for="gongji">공지사항</label>
-              <textarea cols="40" rows="5" readonly name="" >
+              <textarea cols="40" rows="5" readonly name="">
 1.다음주에 자바스크립트 수업 시작
 2.태그와 css복습 (이번주 주말 활용)
               </textarea>
@@ -99,9 +105,9 @@
               <label><input type="radio" name="color" value="blue"><span>파랑</span></label>
             </li>
             <li>
-              <label for=""><input type="checkbox" name="sns" value="pacebook" >페이스북</label>
-              <label for=""><input type="checkbox" name="sns" value="instar" checked >인스타그램</label>
-              <label for=""><input type="checkbox" name="sns" value="x" >엑스</label>
+              <label for=""><input type="checkbox" name="sns" value="pacebook">페이스북</label>
+              <label for=""><input type="checkbox" name="sns" value="instar" checked>인스타그램</label>
+              <label for=""><input type="checkbox" name="sns" value="x">엑스</label>
             </li>
             <li>
               <label for="file">파일전송</label>
@@ -159,15 +165,15 @@
             </li>
             <li>
               <label for="week">년주</label>
-              <input type="week" id="week" name="week">              
+              <input type="week" id="week" name="week">
             </li>
-                        <li>
+            <li>
               <label for="datetime">년월일시간</label>
-              <input type="datetime-local" id="datetime" name="datetime">              
+              <input type="datetime-local" id="datetime" name="datetime">
             </li>
-                                    <li>
+            <li>
               <label for="time">시간</label>
-              <input type="time" id="time" name="time">              
+              <input type="time" id="time" name="time">
             </li>
 
 
@@ -189,9 +195,10 @@
             </li>
           </ul>
 
-        </fieldset>        
+        </fieldset>
       </fieldset>
     </form>
   </div>
 </body>
+
 </html>

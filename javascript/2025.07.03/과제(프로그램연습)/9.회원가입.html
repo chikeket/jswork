@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<title>회원 가입</title>
 	<link rel="stylesheet" href="css/회원가입.css">
-	<script defer src="js/회원가입.js"></script>
+	<!-- <script defer src="js/회원가입.js"></script> -->
 </head>
+
 <body>
 	<div id="container">
 		<h1>회원가입 정보</h1>
@@ -14,19 +16,19 @@
 			<ul id="user-info">
 				<li>
 					<label for="user-id" class="field">아이디</label>
-					<input type="text" id="user-id" name="user-id" placeholder="3~10자리의 영문과 숫자로 입력" required>
+					<input type="text" id="user-id" name="user-id" placeholder="3~10자리의 영문과 숫자로 입력">
 				</li>
 				<li>
 					<label for="tel" class="field">전화번호</label>
-					<input type="tel" id="tel" name="tel" required>
+					<input type="tel" id="tel" name="tel">
 				</li>
 				<li>
 					<label for="user-pw1" class="field">비밀번호</label>
-					<input type="password" id="user-pw1" name="user-pw1" placeholder="4자리 이상" required>
+					<input type="password" id="user-pw1" name="user-pw1" placeholder="4자리 이상">
 				</li>
 				<li>
 					<label for="user-pw2" class="field">비밀번호 확인</label>
-					<input type="password" id="user-pw2" name="user-pw2" required>
+					<input type="password" id="user-pw2" name="user-pw2">
 				</li>
 				<li>
 					<label class="field">메일링 수신</label>
@@ -36,11 +38,39 @@
 			</ul>
 			<ul id="buttons">
 				<li>
-					<button type="submit" >가입하기</button>					
-					<button type="reset" >취소</button>
+					<button type="submit">가입하기</button>
+					<button type="reset">취소</button>
 				</li>
 			</ul>
 		</form>
 	</div>
+	<script>
+		let userId = document.querySelector("#user-id");
+		let userPw = document.querySelector("#user-pw1");
+		let userPwC = document.querySelector("#user-pw2");
+		let signupSubmit = document.querySelector("form");
+
+		signupSubmit.addEventListener("submit", idInputInfo);
+		signupSubmit.addEventListener("submit", pwInputInfo);
+		function idInputInfo(event) {
+			if (userId.value == "") {
+				alert("빈칸");
+			} else if (userId.value.length < 3 || userId.value.length > 10) {
+				alert("3-10사이");
+			} else {
+				console.log("정상입력함");
+				userId.select();
+			}
+		}
+
+		function pwInputInfo(event) {
+			if (userPw.value.length < 4) {
+				alert("4자리이상 입력");
+				userPw.value = "";
+				userPw.focus();
+			}
+		}
+	</script>
 </body>
+
 </html>

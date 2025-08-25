@@ -18,6 +18,18 @@
             border: 1px solid #ccc;
             padding: 5px;
         }
+
+        .soldsoldOut {
+            background-color: rgb(146, 28, 111);
+        }
+
+        .soldsoldAble {
+            background-color: greenyellow;
+        }
+
+        .haha {
+            color: blue;
+        }
     </style>
 </head>
 
@@ -31,6 +43,7 @@
         <button type="button" id="btn">배치도</button>
     </form>
     <div id="layout"></div>
+    <!-- <div class="soldsoldOut haha">hoho</div> -->
 
     <script>
         let totalP = document.querySelector("#person");
@@ -47,15 +60,33 @@
                 layoutCopy += `<tr>`;
                 for (j = 1; j <= colP.value; j++) {
                     seatNum++;
-                    layoutCopy += `<td>좌석 : ${seatNum}</td>`;
+                    layoutCopy += `<td>좌석 : ${seatNum}<br><button class = "seatAble soldsoldAble" id = ${j}>구매가능</button></td>`;
                     if (parseInt(totalP.value) <= seatNum) {
                         break;
                     }
+
                 }
                 layoutCopy += `</tr>`;
             }
             layoutCopy += `</table>`;
             layout.innerHTML = layoutCopy;
+            let seatToggle = document.querySelectorAll(".seatAble");
+            for (let ele of seatToggle) {
+                ele.onclick = soldOut;
+            }
+            console.log(seatToggle);
+        }
+
+        function soldOut() {
+            this.innerHTML = `구매불가`;
+            this.classList.replace("soldsoldAble", "soldsoldOut");
+            this.onclick = soldAble;
+        }
+        function soldAble() {
+            this.innerHTML = `구매가능`;
+            this.classList.replace("soldsoldOut", "soldsoldAble");
+            this.onclick = soldOut;
+
         }
 
 
